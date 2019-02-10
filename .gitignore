@@ -1,3 +1,7 @@
+.DS_Store
+.htaccess
+dist
+
 # Logs
 logs
 *.log
@@ -59,3 +63,4 @@ typings/
 
 # next.js build output
 .next
+src/assets/fonts/icomoon/.DS_Store
