@@ -24,13 +24,13 @@ module.exports = smp.wrap({
   },
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: "babel-loader"
-      //   }
-      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
       {
         test: /\.scss$/,
         use: [
@@ -96,11 +96,11 @@ module.exports = smp.wrap({
         to: '',
         toType: 'file'
       },
-      {
-        from: './src/assets/OBJLoader.js',
-        to: '',
-        toType: 'file'
-      }
+      // {
+      //   from: './src/assets/OBJLoader.js',
+      //   to: '',
+      //   toType: 'file'
+      // }
     ])
     // new webpack.HotModuleReplacementPlugin()
   ]
