@@ -7,20 +7,20 @@
     font-style: normal;
   }
 
-  @font-face {
-    font-family: 'Madman';
-    src: url("./assets/fonts/TheTypingofaMadman/TheTypingofaMadman.woff2") format("woff2"), url("./assets/fonts/TheTypingofaMadman/TheTypingofaMadman.woff") format("woff");
-  }
+  // @font-face {
+  //   font-family: 'Madman';
+  //   src: url("./assets/fonts/TheTypingofaMadman/TheTypingofaMadman.woff2") format("woff2"), url("./assets/fonts/TheTypingofaMadman/TheTypingofaMadman.woff") format("woff");
+  // }
   
   @font-face {
     font-family: 'GothamXNUI';
     src: url("./assets/fonts/Gotham/GothamXNarrow-UltraItalic.woff2") format("woff2"), url("./assets/fonts/Gotham/GothamXNarrow-BlackItalic.woff") format("woff");
   }
   
-  @font-face {
-    font-family: 'GothamXNBI';
-    src: url("./assets/fonts/Gotham/GothamXNarrow-BlackItalic.woff2") format("woff2"), url("./assets/fonts/Gotham/GothamXNarrow-BlackItalic.woff") format("woff");
-  }
+  // @font-face {
+  //   font-family: 'GothamXNBI';
+  //   src: url("./assets/fonts/Gotham/GothamXNarrow-BlackItalic.woff2") format("woff2"), url("./assets/fonts/Gotham/GothamXNarrow-BlackItalic.woff") format("woff");
+  // }
   
   $bloodred: #ff0026;
   $spacegray: #121212;
@@ -62,7 +62,7 @@
   .wrapper {
     display: flex;
     position: absolute;
-    background: $limesick;
+    background: $spacegray;
     position: fixed;
     text-align: center;
     height: 100%;
@@ -82,7 +82,7 @@
     font-family: "GothamXNUI";
     font-weight: 100;
     font-size: 2vw;
-    color: limegreen;
+    color: $bloodred;
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -97,7 +97,7 @@
     cursor: pointer;
     height: 15%;
     width: 100%;
-    filter: invert(100%);
+    // filter: invert(100%);
   }
   
   #navcontainer {
@@ -133,7 +133,7 @@
     height: 100px;
     width: 100px;
     font-size: 5pt;
-    color: $midori;
+    color: $bloodred;
     font-family: futura;
     display: table;
     margin-top: 20px;
@@ -163,11 +163,11 @@
     -moz-osx-font-smoothing: grayscale;
     font-size: 15pt;
     line-height: 2;
-    color: $midori;
+    color: $bloodred;
   }
   
   i:hover {
-    color: limegreen;
+    color: red;
   }
   
   .icon-twitter:before {

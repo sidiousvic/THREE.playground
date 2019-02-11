@@ -4,23 +4,33 @@ const webpack = require ('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
 
-module.exports = {
+module.exports = smp.wrap({
+  // devtool: (mode === 'development') ? 'inline-source-map' : false,
+  mode: 'development',
   entry: { main: './src/app.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
     publicPath: '/dist/'
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    // hot: true,
+    compress: false,
+    port: 9000
+  },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: "babel-loader"
+      //   }
+      // },
       {
         test: /\.scss$/,
         use: [
@@ -92,5 +102,6 @@ module.exports = {
         toType: 'file'
       }
     ])
+    // new webpack.HotModuleReplacementPlugin()
   ]
-};
+});
